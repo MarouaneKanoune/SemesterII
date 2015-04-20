@@ -1,6 +1,6 @@
 package Assets;
 public abstract class Asset {
-	//testerino
+	//pizza
 	protected String name;
 	protected long value;
 			
