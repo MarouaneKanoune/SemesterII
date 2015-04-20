@@ -1,6 +1,7 @@
 package Assets;
 public abstract class Asset {
-	//wut
+	//wutseriouschange
+	
 	protected String name;
 	protected long value;
 			
