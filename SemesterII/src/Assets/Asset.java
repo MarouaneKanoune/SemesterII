@@ -1,7 +1,6 @@
 package Assets;
 public abstract class Asset {
-	//wutseriouschange
-	
+	//testerino
 	protected String name;
 	protected long value;
 			
