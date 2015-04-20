@@ -1,6 +1,6 @@
 package Assets;
 public abstract class Asset {
-	//macaronialktucino
+	
 	protected String name;
 	protected long value;
 			
