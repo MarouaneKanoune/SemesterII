@@ -4,17 +4,19 @@ public enum StockGameCommandType implements CommandTypeInfo {
 	
 	HELP("help", "*list all commands"),
 	EXIT("exit", "exit program"),
-	CREATEPLAYER("crp <playername>", "create a player"),
-	BUYSHARE("buyshare <playername> <sharename> <amount>", "buy a share"),
-	SELLSHARE("sellshare <playername> <sharename> <amount>", "sell a share");
+	CREATEPLAYER("crp <playername>", "create a player", String.class),
+	BUYSHARE("buyshare <playername> <sharename> <amount>", "buy a share", String.class, String.class, Integer.class),
+	SELLSHARE("sellshare <playername> <sharename> <amount>", "sell a share", String.class, String.class, Integer.class);
 	
 	private final String command;
 	private final String description;
+	private final Class<?>[] paramTypes;
 	
-	StockGameCommandType(String command, String description){
+	StockGameCommandType(String command, String description, Class<?>... paramTypes){
 		
 		this.command = command;
 		this.description = description;
+		this.paramTypes = paramTypes;
 		
 	}
 	
@@ -34,8 +36,8 @@ public enum StockGameCommandType implements CommandTypeInfo {
 	}
 
 	@Override
-	public Class<?> getParamTypes() {
+	public Class<?>[] getParamTypes() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.paramTypes;
 	}
 }
