@@ -4,6 +4,6 @@ public interface CommandTypeInfo {
 	
 	String getCommand();
 	String getDescription();
- 	Class <?> getParamTypes();
+ 	Class <?>[] getParamTypes();
 
 }
