@@ -19,8 +19,6 @@ public class StockGameCommandProcessor {
 		
 	}
 	
-	 StockGameCommandType commandType = (StockGameCommandType)commandDescriptor.getCommandType();
-     switch (commandType)
-        
+	
 	
 }

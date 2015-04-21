@@ -1,16 +1,16 @@
 package Commands;
+import java.io.BufferedReader;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CommandScanner {
 
-	private CommandTypeInfo[] commandTypes = new CommandTypeInfo[StockGameCommandType.values().length];
+	private ArrayList<CommandTypeInfo> commandTypes = new ArrayList<>();
 	
-	public CommandScanner(){
-		for(int i=0; i<StockGameCommandType.values().length; i++){
-			
-		}	
-		
+	public CommandScanner(CommandTypeInfo[] commandTypeInfo, BufferedReader reader){
+		commandTypes.addAll(Arrays.asList(commandTypeInfo));	//factory method which allows arrays to be viewed as lists.		
 	}
-	
+
 	
 	
 	
