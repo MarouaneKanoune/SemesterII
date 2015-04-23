@@ -16,5 +16,5 @@ public interface AccountManager {
 	String shareDepositAccountToString(String player);
 	Player[] getPlayers();
 	void updatePlayers();
-	
+	//mitdenboiZ
 }
