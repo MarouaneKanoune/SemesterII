@@ -17,33 +17,24 @@ public class CommandScanner {
 	
 	public void inputLine2CommandDescriptor(CommandDescriptor commandDescriptor)throws IOException{
 		String[] line = this.reader.readLine().split(" ");
-		for(int i=0;i<commandTypeInfos.length;i++){
-			if(commandTypeInfos[i].getCommand() == line[0] ){
-				commandDescriptor.setCommandType(commandTypeInfos[i]);
-				break;
-			}	
+		if(line.length == 1){
+			for(int i=0;i<commandTypeInfos.length;i++){
+				if(commandTypeInfos[i].getCommand().equals(line[0])){
+					commandDescriptor.setCommandType(commandTypeInfos[i]);
+					break;
+				}
+			}
 		}
-		Object[] paramTypes = new Object[1];
-		for(int i=0;i<commandTypeInfos.length;i++){
-//			for(int j=0;j<)
-//			if(commandTypeInfos[i].getParamTypes())
-//		}
 		
+		if(line.length >= 2){ // if a player is created
+			
+			for(int i=0;i<commandTypeInfos.length;i++){
+				if(commandTypeInfos[i].getCommand().split(" ")[0].equals(line[0])){
+					commandDescriptor.setCommandType(commandTypeInfos[i]);
+					commandDescriptor.setParams(commandTypeInfos[i].getParamTypes());
+					break;
+				}
+			}
+		}
 	}
-//		Iterator<CommandTypeInfo> commandIterator = commandTypes.listIterator();
-	
-//		private ArrayList<CommandTypeInfo> commandTypes = new ArrayList<>();		
-//		while(newIterator.hasNext()){
-//			CommandTypeInfo commandTypeInfo = commandIterator.next();
-//			commandDescriptor.setCommandType(commandTypes.get(0));
-//			ArrayList<?> wut = commandTypes.get(2));
-//			if(commandTypeInfo.getCommand().equals(line[0])){
-//				commandDescriptor.setCommandType(commandTypeInfo);
-//				break;
-//			}
-//		while(paramTypeIterator.hasNext()){
-//			
-//		}
-//		}
-		
 }

@@ -22,7 +22,7 @@ public class  CommandDescriptor{
 		return params;
 	}
 
-	public void setParams(Object[] params) {
+	public void setParams(Object... params) {
 		this.params = params;
 	}
 	
